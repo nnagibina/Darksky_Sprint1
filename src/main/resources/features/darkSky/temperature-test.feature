@@ -12,3 +12,9 @@ Feature: Testing Home webpage of "https://darksky.net"
   Scenario: Verify timline is displayed in correct format
     Given I am on Darksky home page
     Then I verify timeline is displayed with two hours incremented
+
+  @darksky_verify_lowest_and_highest_temp
+  Scenario: Verify individual day temp timeline
+    Given I am on Darksky home Page
+    When I expand todays timeline
+    Then I verify lowest and highest temp is displayed correctly
